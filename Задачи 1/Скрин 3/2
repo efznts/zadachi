@@ -1,0 +1,11 @@
+letter = input('')
+def help_bool(letter):
+    if letter == 'к':
+        return('Правило коммутативности:\n"A * B = B * A"')
+    elif letter == 'а':
+        return('Правила ассоциативности:\n"(A v B) v C = A v (B v C)"\n"A * (B * C) = (A * B) * C')
+    elif letter == 'д':
+        return('Правила дистрибутивности:\n"A v (B * C) = (A v B) * (A v C)"\n"A * (B v C) = (A v B) * (A v C)"')
+    elif letter == 'м':
+        return('Правило Де Моргана:\n"не (A v B) = не A v не B"')
+print(help_bool(letter))
