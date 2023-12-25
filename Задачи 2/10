@@ -1,0 +1,4 @@
+def xy(x, y):
+    coords = list(zip(x, y))
+    return coords
+print(xy([1, 2, 3], [4, 3, 5]))
