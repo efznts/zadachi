@@ -1,0 +1,4 @@
+s = [10, 100, 1000]
+def useless(s):
+    return max(s) / len(s)
+print(useless(s))
