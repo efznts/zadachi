@@ -1,0 +1,5 @@
+lst = [234, 4, 6131, -2436, 34.3]
+def list_sort(lst):
+    lst.sort(key = lambda x: abs(x), reverse = True)
+    return lst
+print(list_sort(lst))
