@@ -1,0 +1,6 @@
+def dislike_6(a):
+    if isinstance(a, float):
+        return 'Только не 6!'
+    else:
+        return True
+print(dislike_6(6.0))
