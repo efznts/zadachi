@@ -4,3 +4,4 @@ def first_last(letter, st):
         return None, None
     last = st.rfind(letter)
     return first, last
+print(first_last('a', 'gdfssdaavmmmmad'))
