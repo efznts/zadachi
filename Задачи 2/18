@@ -1,0 +1,8 @@
+def hacker(str):
+    replacements = {'a': '4', 'e': '3', 'i': '1', 'o': '0', 's': '5'}
+    coded_str = ''
+    for symbol in str:
+        coded_symbol = replacements.get(symbol.lower(), symbol)
+        coded_str += coded_symbol
+    return coded_str
+print(hacker('hello'))
