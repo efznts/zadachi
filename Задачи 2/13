@@ -1,0 +1,5 @@
+def delete_spaces(str):
+    words = str.split()
+    new_str = ' '.join(words)
+    return new_str
+print(delete_spaces(' ыфва    фаф  ывфвыа    а '))
