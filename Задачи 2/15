@@ -4,6 +4,4 @@ def multiply(str):
     for n in ns:
         res *= n
     return res
-str = "32, 3, 4.2, 12"
-res = multiply(str)
-print(f"Результат умножения чисел: {res}")
+print(multiply("32, 3, 4.2, 12"))
