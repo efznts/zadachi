@@ -1,0 +1,4 @@
+def greeting(guests):
+    for guest in guests:
+        print(f'Привет, {guest}!')
+print(greeting(['Андрей', 'Анна', 'Алексей']))
