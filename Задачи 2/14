@@ -1,0 +1,10 @@
+import math
+def mass(r, h):
+    p = 1000
+    V = math.pi * r**2 * h
+    m = V * p
+    return round(m, 2)
+r = 1.23
+h = 10
+result = mass(r, h)
+print(f"Масса воды в цилиндре: {result} кг")
