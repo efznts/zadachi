@@ -1,0 +1,10 @@
+def median(nums):
+    sorted_nums = sorted(nums)
+    n = len(sorted_nums)
+    if n % 2 == 1:
+        return sorted_nums[n // 2]
+    else:
+        mid1 = sorted_nums[n // 2 - 1]
+        mid2 = sorted_nums[n // 2]
+        return (mid1 + mid2) / 2
+print(median([1, 6, 10, 11]))
