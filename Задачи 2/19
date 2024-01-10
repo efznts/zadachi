@@ -1,0 +1,8 @@
+def nsum(nums):
+    result = []
+    nsum = 0
+    for num in nums:
+        nsum += num
+        result.append(nsum)
+    return result
+print(nsum([1, 2, 3, 4, 5]))
