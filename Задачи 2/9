@@ -1,0 +1,5 @@
+def delete_enemies(names, enemies):
+    return [name for name in names if name not in enemies]
+names = ['Кирилл', 'Иван', 'Александр', 'Петр']
+enemies = ["Петр", "Иван"]
+print(delete_enemies(names, enemies))
