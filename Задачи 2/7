@@ -1,0 +1,12 @@
+def button_presses(message):
+    alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    result = []
+    for letter in message:
+        letter = letter.upper()
+        if letter == ' ':
+            result.append(0)
+        elif letter in alphabet:
+            number_of_presses = alphabet.index(letter) + 1
+            result.append(number_of_presses)
+    return result
+print(button_presses('ABCDEF'))
