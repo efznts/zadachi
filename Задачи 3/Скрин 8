@@ -1,0 +1,21 @@
+def russian_numbers(number):
+    if not 0 <= number <= 999:
+        return "Число должно быть от 0 до 999"
+    one_to_ten = ['', 'один', 'два', 'три', 'четыре', 'пять', 'шесть', 'семь', 'восемь', 'девять']
+    ten_to_twenty = ['', 'одиннадцать', 'двенадцать', 'тринадцать', 'четырнадцать', 'пятнадцать', 'шестнадцать', 'семнадцать', 'восемнадцать', 'девятнадцать']
+    tens = ['', 'десять', 'двадцать', 'тридцать', 'сорок', 'пятьдесят', 'шестьдесят', 'семьдесят', 'восемьдесят', 'девяносто']
+    hundreds = ['', 'сто', 'двести', 'триста', 'четыреста', 'пятьсот', 'шестьсот', 'семьсот', 'восемьсот', 'девятьсот']
+    def convert_number(n):
+        if 1 <= n <= 9:
+            return one_to_ten[n]
+        elif 10 <= n <= 19:
+            return ten_to_twenty[n - 10]
+        elif 20 <= n <= 99:
+            return tens[n // 10] + ('' if n % 10 == 0 else ' ' + one_to_ten[n % 10])
+        else:
+            return hundreds[n // 100] + ('' if n % 100 == 0 else ' ' + convert_number(n % 100))
+    hundreds_part = number // 100
+    remainder = number % 100
+    result = convert_number(hundreds_part * 100) + ('' if remainder == 0 else ' ' + convert_number(remainder))
+    return result
+print(russian_numbers(123))
