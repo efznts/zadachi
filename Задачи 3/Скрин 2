@@ -1,0 +1,8 @@
+def replace(string):
+    words = string.split()
+    for i in range(len(words)):
+        word = words[i]
+        words[i] = word.rstrip('?').rstrip('!') + ' '
+    result = ''.join(words).rstrip()
+    return result
+print(replace('Как дела? Хорошо!'))
