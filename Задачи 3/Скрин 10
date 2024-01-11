@@ -1,0 +1,14 @@
+def distribute(coins):
+    total_coins = sum(coins)
+    if total_coins % 3 != 0:
+        return False
+    coins_per_child = total_coins // 3
+    current_sum = 0
+    count_children = 0
+    for coin in coins:
+        current_sum += coin
+        if current_sum == coins_per_child:
+            current_sum = 0
+            count_children += 1
+    return count_children == 3
+print(distribute([10, 5, 10, 5, 2]))
