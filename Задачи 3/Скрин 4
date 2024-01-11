@@ -1,0 +1,12 @@
+def sum_of_numbers(s):
+    current_number = 0
+    total_sum = 0
+    for char in s:
+        if char.isdigit():
+            current_number = current_number * 10 + int(char)
+        else:
+            total_sum += current_number
+            current_number = 0
+    total_sum += current_number
+    return total_sum
+print(sum_of_numbers('daqd123e423i1ruf13b'))
