@@ -1,0 +1,14 @@
+def happy_tickets(length):
+    if length % 2 != 0 or length <= 0:
+        return "Длина должна быть положительным четным числом"
+    half_length = length // 2
+    count = 0
+    for i in range(10 ** (half_length - 1), 10 ** half_length):
+        left_half = str(i)
+        right_half = left_half[::-1]
+        left_sum = sum(map(int, left_half))
+        right_sum = sum(map(int, right_half))
+        if left_sum == right_sum:
+            count += 1
+    return count
+print(happy_tickets(6))
