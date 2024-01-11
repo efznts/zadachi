@@ -1,0 +1,15 @@
+def check_password(password):
+    difficulty = 0
+    if len(password) >= 8:
+        difficulty += 1
+    if any(char.isupper() for char in password):
+        difficulty += 1
+    if any(char.islower() for char in password):
+        difficulty += 1
+    if any(char.isdigit() for char in password):
+        difficulty += 1
+    special_characters = "!@#$%^&*()-=_+[]{}|;:'\",.<>/?"
+    if any(char in special_characters for char in password):
+        difficulty += 1
+    return difficulty
+print(check_password('pa$$word12345'))
