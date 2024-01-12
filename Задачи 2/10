@@ -1,4 +1,4 @@
 def xy(x, y):
-    cords = list(zip(x, y))
-    return cords
+    coords = list(zip(x, y))
+    return coords
 print(xy([1, 2, 3], [4, 3, 5]))
